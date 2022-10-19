@@ -1,0 +1,27 @@
+<header class="w3-container w3-teal">
+  <h1>Welcome To J's Dog Adaption Clinic</h1>
+</header>
+
+<div class="w3-row">
+    <ul>
+        {{#each petList}}
+            <div class="w3-third">
+                <img class="pet-image" src={{imgUrl}} style="height: 300px ;"/>
+                <br/>
+                <h1>{{name}}</h1>
+                <form action="/Pet/{{id}}" method="GET">
+                    <button type="submit">View Details</button>
+                </form>
+                <form action="/Pet/edit/{{id}}" method="GET">
+                    <button type="submit">Edit Details</button>
+                </form>
+                <form action="/Pet/delete/{{id}}" method="POST">
+                    <button type="submit">Delete Item</button>
+                </form>
+            </div>
+        {{/each}}
+    </ul>
+</div>
+
+<br/>
+<button type="submit"><a href="/Pet/new">Add New Dog</a></button>

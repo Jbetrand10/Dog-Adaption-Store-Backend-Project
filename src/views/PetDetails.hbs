@@ -1,0 +1,17 @@
+{{#with foundPet}}
+<ul>
+    <div class="w3-container">
+        <h1>Your Dog's Details</h1>
+        <h1> <img class="pet-image" src={{imgUrl}}/></h1>
+        <p>{{name}}</p>
+        <p>Age: {{Age}}</p>
+        <p>Dog Description: {{description}}</p>
+        <form action="/Pet/edit/{{id}}" method="GET">
+            <button type="submit" class="w3-button w3-teal">Edit Dog Listing</button>
+        </form>
+    </div>
+
+</ul>
+{{/with}}
+<br>
+<button type="submit" class="w3-button w3-black"><a href="/Pet">Back Home</a></button>
